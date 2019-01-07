@@ -9,6 +9,8 @@ You can name the command anything you like, I use `tempsecret` witout the .py as
 
 Provided you have the Nexmo CLI installed it will use the same credentials file in `~/.nexmorc`
 
+The only non-standard python library in use is `requests` you can install this by running `pip -r requirements.txt` however once you have pip then you will already have requests installed! 
+
 ## Running
 By default the command will set a temporary secret of `Password123` for 5 mins (300 seconds) you can modify these by using `-p` and pasing in your own secret or `-t` for your own time
 The secret must meet the nexmo requirements (8-25chars, Upper & Lower Alpha & Number)
