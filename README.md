@@ -7,6 +7,8 @@ This is a script to temporarily set an additional API secret on your nexmo accou
 Copy the above code to somehere in your path thats executable eg `/usr/local/bin` and chmod it to 755
 You can name the command anything you like, I use `tempsecret` witout the .py as that makes it easier to type.
 
+Provided you have the Nexmo CLI installed it will use the same credentials file in `~/.nexmorc`
+
 ## Running
 By default the command will set a temporary secret of `Password123` for 5 mins (300 seconds) you can modify these by using `-p` and pasing in your own secret or `-t` for your own time
 The secret must meet the nexmo requirements (8-25chars, Upper & Lower Alpha & Number)
