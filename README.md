@@ -15,7 +15,9 @@ The only non-standard python library in use is `requests` you can install this b
 By default the command will set a temporary secret of `Password123` for 5 mins (300 seconds) you can modify these by using `-p` and pasing in your own secret or `-t` for your own time
 The secret must meet the nexmo requirements (8-25chars, Upper & Lower Alpha & Number)
 
-setting the `-c` flag will just check how many secrets you have on your account and when they were created, you can have a maximum of 2 secrets at one time, to manage them use the Dashbaord.
+Setting the `-c` flag will just check how many secrets you have on your account and when they were created, you can have a maximum of 2 secrets at one time, to manage them use the Dashbaord.
+
+There also a `-d` flag which is for the debug mode which can be used when you are debugging something in the code and would like to see all the information pertaining to the requests sent or received.
 
 ## Important
 You must leave the window open and the command running until the timer completes and the secret has been revoked otherwise it will stay on your account

@@ -27,9 +27,12 @@ def get_secrets():
   resp = requests.get(url, headers=headers)
   data = resp.json()
   print(f"You have {len(data['_embedded']['secrets'])} secrets on your account")
-  for secret in data['_embedded']['secrets']:
-    created_date, created_time = secret['created_at'].split('T')
-    print(f"Secret with Secret ID: {secret['id']} was created on: {created_date} at {created_time.strip('Z')} UTC")
+  if debug:
+    print(data)
+  else:
+    for secret in data['_embedded']['secrets']:
+      created_date, created_time = secret['created_at'].split('T')
+      print(f"Secret with Secret ID: {secret['id']} was created on: {created_date} at {created_time.strip('Z')} UTC")
  
 def new_secret(secret):
   url = f"https://api.nexmo.com/accounts/{API_KEY}/secrets"
